@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programy — Fundacja Bez Szeptu</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F2D5C'/%3E%3Cpath d='M20 46V18h9c5 0 8 2.4 8 6.6 0 2.7-1.4 4.6-3.8 5.5 3 .8 4.8 3 4.8 6 0 4.6-3.3 6.9-8.6 6.9zm5.6-16.7h3c2.2 0 3.5-1 3.5-2.9s-1.3-2.8-3.6-2.8h-2.9zm0 12.2h3.4c2.4 0 3.7-1 3.7-3s-1.4-3-3.9-3h-3.2z' fill='%23E8B458'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Alexandria:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bs-styles.css">
+  <style>
+    .bs-program-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--bs-white);
+      border: 1px solid var(--bs-line);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 240ms cubic-bezier(0.22,1,0.36,1), box-shadow 240ms;
+    }
+    .bs-program-card:hover { transform: translateY(-6px); box-shadow: var(--sh-3); color: inherit; }
+    .bs-program-media { height: 220px; position: relative; overflow: hidden; }
+    .bs-program-media img { width: 100%; height: 100%; object-fit: cover; }
+    .bs-program-ph {
+      width: 100%; height: 100%;
+      background:
+        repeating-linear-gradient(45deg, var(--bs-sage-wash) 0 12px, #E4E9F3 12px 24px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .bs-program-ph span {
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 12px; color: var(--bs-sage); background: rgba(251,248,243,0.85);
+      padding: 8px 14px; border-radius: var(--r-pill); letter-spacing: 0.02em;
+    }
+    .bs-program-badge {
+      position: absolute; top: 14px; left: 14px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 5px 12px; border-radius: var(--r-pill);
+      background: var(--bs-clay); color: var(--bs-sage-deep);
+    }
+    .bs-program-badge.soon { background: var(--bs-sage-wash); color: var(--bs-sage); }
+    .bs-program-body { padding: 28px 30px 30px; display: flex; flex-direction: column; flex-grow: 1; }
+    .bs-program-more {
+      margin-top: auto; padding-top: 20px;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-weight: 600; font-size: 14px; color: var(--bs-clay-deep);
+    }
+    .bs-program-card:hover .bs-program-more { gap: 12px; }
+  </style>
+</head>
+<body>
+
+<div class="bs-container">
+
+  <div id="bs-header"></div>
+
+  <!-- Page hero -->
+  <section style="padding: 88px 56px 56px; text-align: center;">
+    <span class="bs-eyebrow" style="justify-content: center;">Co robimy</span>
+    <h1 style="font-size: 60px; line-height: 1.06; margin-top: 20px; margin-bottom: 22px; letter-spacing: -0.015em;">Nasze programy</h1>
+    <p style="font-size: 19px; line-height: 1.6; color: var(--bs-fg-2); max-width: 720px; margin: 0 auto;">Konkretne inicjatywy skierowane do różnych grup — młodzieży, kobiet, seniorów. Każdy program to realne wsparcie, warsztaty i narzędzia dopasowane do potrzeb.</p>
+  </section>
+
+  <!-- Program tiles -->
+  <section style="padding: 0 56px 100px;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1040px; margin: 0 auto;">
+
+      <!-- 1. Przerwij ciszę -->
+      <a class="bs-program-card" href="przerwij-cisze.html">
+        <div class="bs-program-media">
+          <span class="bs-program-badge">Młodzież 12–18</span>
+          <img src="uploads/warsztaty-dla-dzieci-01.JPG" alt="Przerwij ciszę — warsztaty dla młodzieży"/>
+        </div>
+        <div class="bs-program-body">
+          <h2 style="font-size: 27px; line-height: 1.2; margin-bottom: 12px;">Przerwij ciszę</h2>
+          <p style="font-size: 15px; line-height: 1.6; color: var(--bs-fg-2);">Program wsparcia zdrowia psychicznego młodzieży i ich otoczenia. Warsztaty, spotkania i bezpieczna przestrzeń do rozmowy o emocjach.</p>
+          <span class="bs-program-more">Dowiedz się więcej →</span>
+        </div>
+      </a>
+
+      <!-- 2. Aktywizacja zawodowa kobiet → sekcja E-learning -->
+      <a class="bs-program-card" href="index.html#elearning">
+        <div class="bs-program-media">
+          <span class="bs-program-badge">Kobiety · e-learning</span>
+          <img src="uploads/2. warsztaty-fundacja.JPG" alt="Aktywizacja zawodowa kobiet"/>
+        </div>
+        <div class="bs-program-body">
+          <h2 style="font-size: 27px; line-height: 1.2; margin-bottom: 12px;">Aktywizacja zawodowa kobiet</h2>
+          <p style="font-size: 15px; line-height: 1.6; color: var(--bs-fg-2);">Kurs „Kariera" — kompleksowy program e-learningowy wspierający kobiety w powrocie na rynek pracy i budowaniu pewności siebie.</p>
+          <span class="bs-program-more">Przejdź do kursu →</span>
+        </div>
+      </a>
+
+      <!-- 3. Aktywni seniorzy (szablon) -->
+      <a class="bs-program-card" href="aktywni-seniorzy.html">
+        <div class="bs-program-media">
+          <span class="bs-program-badge soon">Wkrótce</span>
+          <div class="bs-program-ph"><span>zdjęcie: Aktywni seniorzy</span></div>
+        </div>
+        <div class="bs-program-body">
+          <h2 style="font-size: 27px; line-height: 1.2; margin-bottom: 12px;">Aktywni seniorzy</h2>
+          <p style="font-size: 15px; line-height: 1.6; color: var(--bs-fg-2);">Program wspierający aktywność, samodzielność i włączenie społeczne osób starszych. Szczegóły dodamy wkrótce.</p>
+          <span class="bs-program-more">Dowiedz się więcej →</span>
+        </div>
+      </a>
+
+      <!-- 4. Nie marnuję - zyskuję (szablon) -->
+      <a class="bs-program-card" href="nie-marnuje-zyskuje.html">
+        <div class="bs-program-media">
+          <span class="bs-program-badge soon">Wkrótce</span>
+          <div class="bs-program-ph"><span>zdjęcie: Nie marnuję – zyskuję</span></div>
+        </div>
+        <div class="bs-program-body">
+          <h2 style="font-size: 27px; line-height: 1.2; margin-bottom: 12px;">Nie marnuję – zyskuję</h2>
+          <p style="font-size: 15px; line-height: 1.6; color: var(--bs-fg-2);">Program edukacyjny o świadomym gospodarowaniu zasobami i przeciwdziałaniu marnowaniu. Szczegóły dodamy wkrótce.</p>
+          <span class="bs-program-more">Dowiedz się więcej →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div id="bs-footer"></div>
+
+</div>
+
+<script src="assets/bs-shared.js"></script>
+
+</body>
+</html>
