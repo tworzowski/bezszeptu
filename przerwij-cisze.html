@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przerwij ciszę — Fundacja Bez Szeptu</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F2D5C'/%3E%3Cpath d='M20 46V18h9c5 0 8 2.4 8 6.6 0 2.7-1.4 4.6-3.8 5.5 3 .8 4.8 3 4.8 6 0 4.6-3.3 6.9-8.6 6.9zm5.6-16.7h3c2.2 0 3.5-1 3.5-2.9s-1.3-2.8-3.6-2.8h-2.9zm0 12.2h3.4c2.4 0 3.7-1 3.7-3s-1.4-3-3.9-3h-3.2z' fill='%23E8B458'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Alexandria:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bs-styles.css">
+  <style>
+    .pc-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 56px;
+      align-items: start;
+      padding: 56px 56px 100px;
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+    /* Sekcje */
+    .pc-section { scroll-margin-top: 100px; margin-bottom: 56px; }
+    .pc-section:last-child { margin-bottom: 0; }
+
+    .pc-overview {
+      background: var(--bs-sage-wash);
+      border-radius: var(--r-xl);
+      padding: 48px 48px 52px;
+    }
+
+    .pc-workshop {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 32px;
+      align-items: center;
+      background: var(--bs-white);
+      border: 1px solid var(--bs-line);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      padding: 0;
+    }
+    .pc-workshop .pc-media { height: 100%; min-height: 240px; position: relative; }
+    .pc-workshop .pc-media img { width: 100%; height: 100%; object-fit: cover; }
+    .pc-ph {
+      width: 100%; height: 100%; min-height: 240px;
+      background: repeating-linear-gradient(45deg, var(--bs-sage-wash) 0 12px, #E4E9F3 12px 24px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pc-ph span {
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 12px; color: var(--bs-sage); background: rgba(251,248,243,0.85);
+      padding: 8px 14px; border-radius: var(--r-pill); text-align: center; max-width: 80%;
+    }
+    .pc-workshop .pc-body { padding: 32px 36px 32px 4px; }
+    .pc-num {
+      font-family: var(--font-display); font-size: 14px; color: var(--bs-clay-deep);
+      letter-spacing: 0.05em; margin-bottom: 10px;
+    }
+
+    /* Boczne menu (scroll-spy) */
+    .pc-nav {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+      max-height: calc(100vh - 130px);
+      overflow-y: auto;
+      background: var(--bs-white);
+      border: 1px solid var(--bs-line);
+      border-radius: var(--r-lg);
+      padding: 18px;
+    }
+    .pc-nav-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--bs-clay-deep); margin-bottom: 14px; padding: 0 10px;
+    }
+    .pc-nav a {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 12px; border-radius: var(--r-sm);
+      font-size: 13.5px; font-weight: 500; color: var(--bs-fg-2);
+      text-decoration: none; transition: all 180ms;
+      border-left: 2px solid transparent;
+    }
+    .pc-nav a .pc-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--bs-line-2); flex-shrink: 0;
+      transition: all 180ms;
+    }
+    .pc-nav a:hover { background: var(--bs-sage-wash); color: var(--bs-sage-deep); }
+    .pc-nav a.active {
+      background: var(--bs-sage-wash); color: var(--bs-sage-deep); font-weight: 600;
+    }
+    .pc-nav a.active .pc-dot { background: var(--bs-clay); transform: scale(1.6); }
+
+    @media (max-width: 1024px) {
+      .pc-layout { grid-template-columns: 1fr; gap: 0; }
+      .pc-nav { display: none; }
+    }
+    @media (max-width: 768px) {
+      .pc-layout { padding: 40px 20px 72px; }
+      .pc-workshop { grid-template-columns: 1fr; }
+      .pc-workshop .pc-media, .pc-ph { min-height: 200px; }
+      .pc-workshop .pc-body { padding: 24px 24px 28px; }
+      .pc-overview { padding: 32px 24px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bs-container">
+
+  <div id="bs-header"></div>
+
+  <!-- Page hero -->
+  <section style="padding: 72px 56px 8px; text-align: center;">
+    <span class="bs-eyebrow" style="justify-content: center;">Program dla młodzieży 12–18 lat</span>
+    <h1 style="font-size: 60px; line-height: 1.05; margin-top: 20px; margin-bottom: 18px; letter-spacing: -0.015em;">Przerwij ciszę</h1>
+    <p style="font-size: 19px; line-height: 1.6; color: var(--bs-fg-2); max-width: 720px; margin: 0 auto;">Powiedz to bez szeptu. Dziesięć warsztatów o emocjach, relacjach i sile proszenia o pomoc.</p>
+  </section>
+
+  <div class="pc-layout">
+
+    <!-- KOLUMNA TREŚCI -->
+    <div>
+
+      <!-- s0: O programie -->
+      <div class="pc-section pc-overview" id="s0">
+        <span class="bs-eyebrow">O programie</span>
+        <h2 style="font-size: 34px; line-height: 1.15; margin: 14px 0 18px;">Bezpieczna przestrzeń do rozmowy o tym, co trudne.</h2>
+        <p style="font-size: 16.5px; line-height: 1.75; color: var(--bs-fg-2); margin-bottom: 16px;">„Przerwij ciszę. Powiedz to bez szeptu" to inicjatywa Fundacji Bez Szeptu, której celem jest wzmacnianie zdrowia psychicznego młodzieży oraz budowanie otwartej, bezpiecznej przestrzeni do rozmowy o emocjach i codziennych wyzwaniach.</p>
+        <p style="font-size: 16.5px; line-height: 1.75; color: var(--bs-fg-2); margin-bottom: 28px;">Poprzez warsztaty, wspólne działania i spotkania z ekspertami uczymy, jak rozpoznawać emocje, skutecznie się komunikować, wzmacniać poczucie własnej wartości i szukać wsparcia. Zapraszamy młodzież 12–18 lat oraz ich rodziców i opiekunów.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-primary" style="padding: 18px 34px; font-size: 16px; color: var(--bs-cream);">Zapisz się na warsztaty</a>
+        <div style="margin-top: 36px;">
+          <img src="uploads/plansza_ze_znakiem_graf.png" alt="Sfinansowano z budżetu Samorządu Województwa Śląskiego." style="width: 100%; max-width: 460px; height: auto;"/>
+        </div>
+      </div>
+
+      <!-- Warsztaty s1–s10 -->
+      <div class="pc-section pc-workshop" id="s1">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 1 — Emocje</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 01</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Rozpoznawanie i nazywanie emocji</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Uczymy się zauważać, co czujemy i skąd to się bierze. Proste narzędzia do nazywania emocji i rozumienia własnych reakcji.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s2">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 2 — Stres i lęk</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 02</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Radzenie sobie ze stresem i lękiem</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Techniki oddechowe, uważność i praktyczne sposoby na trudne momenty — w szkole, w domu i w relacjach.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s3">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 3 — Komunikacja</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 03</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Komunikacja bez przemocy</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Jak mówić o swoich potrzebach i słuchać innych bez ranienia. Rozwiązywanie konfliktów w duchu porozumienia.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s4">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 4 — Poczucie wartości</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 04</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Budowanie poczucia własnej wartości</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Skąd bierze się pewność siebie i jak ją wzmacniać. Praca z wewnętrznym krytykiem i mocnymi stronami.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s5">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 5 — Relacje i granice</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 05</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Zdrowe relacje i granice</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Jak budować relacje oparte na szacunku i stawiać granice. Rozpoznawanie relacji, które nam szkodzą.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s6">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 6 — Świat online</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 06</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Świat online — presja i hejt</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Media społecznościowe, porównywanie się i mowa nienawiści. Jak dbać o siebie w cyfrowym świecie.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s7">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 7 — Prośba o pomoc</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 07</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Kiedy i jak prosić o pomoc</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Proszenie o pomoc to siła, nie słabość. Gdzie i do kogo się zwrócić, gdy jest ciężko.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s8">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 8 — Kryzys i strata</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 08</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Radzenie sobie z kryzysem i stratą</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Jak przejść przez trudne doświadczenia — rozstanie, stratę, zmianę. Oswajanie emocji, które przytłaczają.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s9">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 9 — Dla rodziców</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 09</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Warsztaty dla rodziców i opiekunów</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Jak rozmawiać z nastolatkiem, rozpoznawać sygnały ostrzegawcze i być wsparciem, nie sędzią.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+      <div class="pc-section pc-workshop" id="s10">
+        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 10 — Integracja</span></div></div>
+        <div class="pc-body">
+          <div class="pc-num">Warsztat 10</div>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Integracja i wspólne działania</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Spotkanie podsumowujące — wspólne aktywności, budowanie społeczności i planowanie dalszych kroków.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOCZNE MENU (scroll-spy) -->
+    <aside class="pc-nav" id="pcNav">
+      <div class="pc-nav-title">Na tej stronie</div>
+      <a href="#s0"><span class="pc-dot"></span>O programie</a>
+      <a href="#s1"><span class="pc-dot"></span>1 · Emocje</a>
+      <a href="#s2"><span class="pc-dot"></span>2 · Stres i lęk</a>
+      <a href="#s3"><span class="pc-dot"></span>3 · Komunikacja</a>
+      <a href="#s4"><span class="pc-dot"></span>4 · Poczucie wartości</a>
+      <a href="#s5"><span class="pc-dot"></span>5 · Relacje i granice</a>
+      <a href="#s6"><span class="pc-dot"></span>6 · Świat online</a>
+      <a href="#s7"><span class="pc-dot"></span>7 · Prośba o pomoc</a>
+      <a href="#s8"><span class="pc-dot"></span>8 · Kryzys i strata</a>
+      <a href="#s9"><span class="pc-dot"></span>9 · Dla rodziców</a>
+      <a href="#s10"><span class="pc-dot"></span>10 · Integracja</a>
+    </aside>
+
+  </div>
+
+  <div id="bs-footer"></div>
+
+</div>
+
+<script src="assets/bs-shared.js"></script>
+
+<!-- Scroll-spy bocznego menu -->
+<script>
+(function () {
+  var nav = document.getElementById('pcNav');
+  if (!nav) return;
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var sections = links.map(function (l) { return document.querySelector(l.getAttribute('href')); });
+
+  function setActive(idx) {
+    links.forEach(function (l, i) { l.classList.toggle('active', i === idx); });
+  }
+  function onScroll() {
+    var idx = 0;
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i];
+      if (s && s.getBoundingClientRect().top <= 140) idx = i;
+    }
+    setActive(idx);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
