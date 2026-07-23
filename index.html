@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundacja Bez Szeptu</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F2D5C'/%3E%3Cpath d='M20 46V18h9c5 0 8 2.4 8 6.6 0 2.7-1.4 4.6-3.8 5.5 3 .8 4.8 3 4.8 6 0 4.6-3.3 6.9-8.6 6.9zm5.6-16.7h3c2.2 0 3.5-1 3.5-2.9s-1.3-2.8-3.6-2.8h-2.9zm0 12.2h3.4c2.4 0 3.7-1 3.7-3s-1.4-3-3.9-3h-3.2z' fill='%23E8B458'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Alexandria:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/bs-styles.css">
+</head>
+<body>
+
+<div class="bs-container">
+
+  <!-- Wspólny header + nawigacja (wstrzykiwane przez assets/bs-shared.js) -->
+  <div id="bs-header"></div>
+
+  <!-- Hero Section -->
+  <section style="padding: 120px 56px 96px; position: relative; min-height: 600px; display: flex; align-items: center; justify-content: center;">
+    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0.12; pointer-events: none;">
+      <img src="assets/logo.jpg" style="width: 60%; height: auto; object-fit: contain; mix-blend-mode: multiply;"/>
+    </div>
+    <div style="position: relative; z-index: 1; max-width: 860px; text-align: center;">
+      <span class="bs-eyebrow" style="justify-content: center;">Fundacja na rzecz osób w kryzysie</span>
+      <h1 style="font-size: 72px; line-height: 1.08; margin-top: 24px; margin-bottom: 28px; letter-spacing: -0.015em;">
+        <span>Przełamujemy milczenie. </span>
+        <em style="font-style: italic; color: var(--bs-clay-deep); font-weight: 500;">Przywracamy głos.</em>
+      </h1>
+      <p style="font-size: 20px; line-height: 1.55; color: var(--bs-fg-2); margin-bottom: 40px; max-width: 720px; margin-left: auto; margin-right: auto;">Tam, gdzie inni wolą odwrócić wzrok, my patrzymy prosto w oczy rzeczywistości. W Fundacji Bez Szeptu mówimy głośno i wyraźnie o tym, o czym reszta świata boi się nawet szepnąć. Przemoc karmi się milczeniem, tabu i wstydem. My to milczenie przerywamy.</p>
+      <div style="display: flex; gap: 14px; align-items: center; justify-content: center;">
+        <a class="bs-btn bs-btn-primary" href="#support" style="padding: 20px 36px; font-size: 17px;">Potrzebuję pomocy</a>
+        <a class="bs-btn bs-btn-ghost" href="#about" style="padding: 20px 36px; font-size: 17px;">Poznaj fundację</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Numbers Banner -->
+  <section id="pomoc" style="padding: 0 56px 88px; scroll-margin-top: 90px;">
+    <div style="padding: 32px 40px; background: var(--bs-ink); color: var(--bs-cream); border-radius: var(--r-xl); display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 32px; align-items: center;">
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bs-clay-soft); margin-bottom: 8px;">Potrzebujesz natychmiastowej pomocy?</div>
+        <div style="font-family: var(--font-display); font-size: 22px; line-height: 1.3;">Te numery są aktywne<br />24 godziny na dobę.</div>
+      </div>
+      <div>
+        <a href="tel:112" style="font-family: var(--font-display); font-size: 30px; font-weight: 600; color: var(--bs-cream); display: block; margin-bottom: 4px; letter-spacing: -0.005em;">112</a>
+        <div style="font-size: 13px; color: rgba(251,248,243,0.7); font-weight: 500;">Sytuacja zagrożenia życia</div>
+      </div>
+      <div>
+        <a href="tel:800120002" style="font-family: var(--font-display); font-size: 30px; font-weight: 600; color: var(--bs-cream); display: block; margin-bottom: 4px; letter-spacing: -0.005em;">800 12 00 02</a>
+        <div style="font-size: 13px; color: rgba(251,248,243,0.7); font-weight: 500;">"Niebieska Linia" — przemoc</div>
+      </div>
+      <div>
+        <a href="tel:116123" style="font-family: var(--font-display); font-size: 30px; font-weight: 600; color: var(--bs-cream); display: block; margin-bottom: 4px; letter-spacing: -0.005em;">116 123</a>
+        <div style="font-size: 13px; color: rgba(251,248,243,0.7); font-weight: 500;">Kryzys psychiczny — dorośli</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas of Support Section -->
+  <section id="areas" style="padding: 32px 56px 96px; scroll-margin-top: 90px;">
+    <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; margin-bottom: 56px;">
+      <div>
+        <span class="bs-eyebrow">Co robimy</span>
+        <h2 style="font-size: 46px; margin-top: 16px; line-height: 1.05; letter-spacing: -0.01em;">Pięć obszarów<br />realnego wsparcia.</h2>
+      </div>
+      <p style="font-size: 17px; line-height: 1.6; color: var(--bs-fg-2); padding-top: 12px;">Łączymy kompetencje psychologiczne, prawne i mediacyjne. Tworzymy systemowe rozwiązania, które odpowiadają na konkretne potrzeby — od pierwszej rozmowy po długofalowy powrót do równowagi.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto;">
+      <div style="padding: 36px 32px 32px; background: var(--bs-white); border-radius: var(--r-lg); border: 1px solid var(--bs-line); display: flex; flex-direction: column; min-height: 280px; position: relative; overflow: hidden;">
+        <div style="font-family: var(--font-display); font-size: 14px; color: var(--bs-sage); margin-bottom: 24px; letter-spacing: 0.05em;">01</div>
+        <h3 style="font-size: 24px; line-height: 1.2; color: var(--bs-sage-deep); margin-bottom: 14px;">Wsparcie w kryzysie przemocy</h3>
+        <p style="font-size: 14.5px; line-height: 1.6; color: var(--bs-fg-2); flex-grow: 1;">Pomoc osobom doświadczającym przemocy fizycznej, psychicznej, ekonomicznej i seksualnej. Wsparcie psychologiczne, prawne, interwencyjne.</p>
+        <div style="position: absolute; right: -30px; bottom: -30px; width: 110px; height: 110px; border-radius: 50%; background: var(--bs-sage-wash); z-index: 0;"></div>
+      </div>
+      <div style="padding: 36px 32px 32px; background: var(--bs-white); border-radius: var(--r-lg); border: 1px solid var(--bs-line); display: flex; flex-direction: column; min-height: 280px; position: relative; overflow: hidden;">
+        <div style="font-family: var(--font-display); font-size: 14px; color: var(--bs-clay-deep); margin-bottom: 24px; letter-spacing: 0.05em;">02</div>
+        <h3 style="font-size: 24px; line-height: 1.2; color: var(--bs-sage-deep); margin-bottom: 14px;">Mediacje rodzinne i pozasądowe</h3>
+        <p style="font-size: 14.5px; line-height: 1.6; color: var(--bs-fg-2); flex-grow: 1;">Prowadzimy mediacje sądowe i pozasądowe. Wspieramy strony w konstruktywnym dialogu i wypracowaniu trwałych porozumień.</p>
+        <div style="position: absolute; right: -30px; bottom: -30px; width: 110px; height: 110px; border-radius: 50%; background: var(--bs-clay-wash); z-index: 0;"></div>
+      </div>
+      <div style="padding: 36px 32px 32px; background: var(--bs-white); border-radius: var(--r-lg); border: 1px solid var(--bs-line); display: flex; flex-direction: column; min-height: 280px; position: relative; overflow: hidden;">
+        <div style="font-family: var(--font-display); font-size: 14px; color: var(--bs-sage); margin-bottom: 24px; letter-spacing: 0.05em;">03</div>
+        <h3 style="font-size: 24px; line-height: 1.2; color: var(--bs-sage-deep); margin-bottom: 14px;">Reintegracja społeczna i zawodowa</h3>
+        <p style="font-size: 14.5px; line-height: 1.6; color: var(--bs-fg-2); flex-grow: 1;">Programy aktywizacji zawodowej, powrotu na rynek pracy, rozwoju przedsiębiorczości i kompetencji rynkowych.</p>
+        <div style="position: absolute; right: -30px; bottom: -30px; width: 110px; height: 110px; border-radius: 50%; background: var(--bs-sage-wash); z-index: 0;"></div>
+      </div>
+      <div style="padding: 36px 32px 32px; background: var(--bs-white); border-radius: var(--r-lg); border: 1px solid var(--bs-line); display: flex; flex-direction: column; min-height: 280px; position: relative; overflow: hidden;">
+        <div style="font-family: var(--font-display); font-size: 14px; color: var(--bs-clay-deep); margin-bottom: 24px; letter-spacing: 0.05em;">04</div>
+        <h3 style="font-size: 24px; line-height: 1.2; color: var(--bs-sage-deep); margin-bottom: 14px;">Alternatywne metody rozwiązywania sporów</h3>
+        <p style="font-size: 14.5px; line-height: 1.6; color: var(--bs-fg-2); flex-grow: 1;">Uczymy komunikacji, negocjacji i budowania porozumienia w rodzinach, społecznościach i środowisku pracy.</p>
+        <div style="position: absolute; right: -30px; bottom: -30px; width: 110px; height: 110px; border-radius: 50%; background: var(--bs-clay-wash); z-index: 0;"></div>
+      </div>
+      <div style="padding: 36px 32px 32px; background: var(--bs-white); border-radius: var(--r-lg); border: 1px solid var(--bs-line); display: flex; flex-direction: column; min-height: 280px; position: relative; overflow: hidden;">
+        <div style="font-family: var(--font-display); font-size: 14px; color: var(--bs-sage); margin-bottom: 24px; letter-spacing: 0.05em;">05</div>
+        <h3 style="font-size: 24px; line-height: 1.2; color: var(--bs-sage-deep); margin-bottom: 14px;">Równość i dialog społeczny</h3>
+        <p style="font-size: 14.5px; line-height: 1.6; color: var(--bs-fg-2); flex-grow: 1;">Działania na rzecz równości kobiet i mężczyzn, wzmacniania pozycji grup defaworyzowanych, rozwoju wspólnot lokalnych.</p>
+        <div style="position: absolute; right: -30px; bottom: -30px; width: 110px; height: 110px; border-radius: 50%; background: var(--bs-sage-wash); z-index: 0;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="padding: 96px 56px; background: var(--bs-sage-wash); scroll-margin-top: 90px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+      <div style="position: relative; height: 520px;">
+        <img src="uploads/fundacja-Anna-Zabielska.png" alt="Anna Zabielska" style="position: absolute; left: 0; top: 0; width: 280px; height: auto; border-radius: var(--r-xl); box-shadow: var(--sh-2); object-fit: cover;"/>
+        <img src="uploads/fundacja-Gosia.jpeg" alt="Małgorzata" style="position: absolute; right: 0; bottom: 0; width: 280px; height: auto; border-radius: var(--r-xl); box-shadow: var(--sh-2); object-fit: cover;"/>
+        <div class="bs-stat-float" style="position: absolute; right: 100px; top: 60px; padding: 20px 24px; background: var(--bs-cream); border-radius: var(--r-md); box-shadow: var(--sh-3); display: flex; flex-direction: column; gap: 4px;">
+          <div style="font-family: var(--font-display); font-size: 32px; color: var(--bs-sage-deep);">102+</div>
+          <div style="font-size: 12px; color: var(--bs-fg-2); max-width: 110px; line-height: 1.3;">osób objętych wsparciem w 2026</div>
+        </div>
+      </div>
+      <div>
+        <span class="bs-eyebrow">O fundacji</span>
+        <h2 style="font-size: 44px; margin-top: 16px; line-height: 1.08; margin-bottom: 24px;">Łączymy specjalistów, którzy mówią głośno o tym, co inni przemilczają.</h2>
+        <p style="font-size: 17px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 20px;">Fundacja Bez Szeptu powstała z przekonania, że osoby w kryzysie potrzebują nie współczucia, ale konkretnego, systemowego wsparcia. Psychologów, prawników, mediatorów — dostępnych w jednym miejscu.</p>
+        <p style="font-size: 17px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 32px;">Pracujemy z rodzinami, dziećmi, osobami zagrożonymi wykluczeniem. Współpracujemy z instytucjami publicznymi i organizacjami pozarządowymi.</p>
+        <div style="display: flex; gap: 32px; margin-bottom: 36px;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 36px; color: var(--bs-sage-deep);">2026</div>
+            <div style="font-size: 13px; color: var(--bs-fg-2);">rok założenia</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 36px; color: var(--bs-sage-deep);">6</div>
+            <div style="font-size: 13px; color: var(--bs-fg-2);">specjalistów</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 36px; color: var(--bs-sage-deep);">5</div>
+            <div style="font-size: 13px; color: var(--bs-fg-2);">obszary wsparcia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshops "Przerwij ciszę" Section -->
+  <section id="warsztaty" style="padding: 96px 56px; background: var(--bs-paper); scroll-margin-top: 90px;">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto 48px;">
+      <span class="bs-eyebrow" style="justify-content: center;">Program dla młodzieży 12–18 lat</span>
+      <h2 style="font-size: 46px; margin-top: 16px; line-height: 1.05; letter-spacing: -0.01em;">Warsztaty „Przerwij ciszę"</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: var(--bs-fg-2); margin-top: 18px;">Program wsparcia zdrowia psychicznego młodzieży i ich otoczenia. Rozmawiamy, wspieramy, działamy — bez oceniania.</p>
+    </div>
+
+    <div class="bs-slider">
+      <div class="bs-slider-arrow prev" onclick="bsSlide(-1)" aria-label="Poprzedni">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 18 9 12 15 6"/></svg>
+      </div>
+      <div class="bs-slider-viewport">
+        <div class="bs-slider-track" id="bsSliderTrack">
+          <div class="bs-slide"><img src="uploads/warsztaty-dla-dzieci-01.JPG" alt="Przerwij ciszę — program wsparcia"/></div>
+          <div class="bs-slide"><img src="uploads/warsztaty-dla-dzieci-02.JPG" alt="Co robimy — warsztaty dla młodzieży"/></div>
+          <div class="bs-slide"><img src="uploads/warsztaty-dla-dzieci-03.JPG" alt="Dlaczego ten projekt jest ważny"/></div>
+          <div class="bs-slide"><img src="uploads/warsztaty-dla-dzieci-04.JPG" alt="Dołącz do naszych warsztatów"/></div>
+        </div>
+      </div>
+      <div class="bs-slider-arrow next" onclick="bsSlide(1)" aria-label="Następny">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      <div class="bs-slider-dots" id="bsSliderDots">
+        <button class="bs-slider-dot active" onclick="bsGoTo(0)" aria-label="Slajd 1"></button>
+        <button class="bs-slider-dot" onclick="bsGoTo(1)" aria-label="Slajd 2"></button>
+        <button class="bs-slider-dot" onclick="bsGoTo(2)" aria-label="Slajd 3"></button>
+        <button class="bs-slider-dot" onclick="bsGoTo(3)" aria-label="Slajd 4"></button>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 36px;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-primary" style="padding: 20px 40px; font-size: 17px; color: var(--bs-cream);">Zapisz się teraz</a>
+    </div>
+
+    <p style="max-width: 820px; margin: 40px auto 0; font-size: 16.5px; line-height: 1.75; color: var(--bs-fg-2); text-align: center;">„Przerwij ciszę. Powiedz to bez szeptu" to inicjatywa Fundacji Bez Szeptu, której celem jest wzmacnianie zdrowia psychicznego młodzieży oraz budowanie otwartej, bezpiecznej przestrzeni do rozmowy o emocjach i codziennych wyzwaniach. Poprzez warsztaty, wspólne działania i spotkania z ekspertami uczymy, jak rozpoznawać emocje, skutecznie się komunikować, wzmacniać poczucie własnej wartości i szukać wsparcia, gdy jest ono potrzebne. Do udziału zapraszamy młodzież w wieku 12–18 lat oraz ich rodziców i opiekunów, ponieważ wierzymy, że dobre relacje są fundamentem zdrowia psychicznego. Naszym celem jest pokazanie, że proszenie o pomoc jest oznaką odwagi, a nie słabości, i że nikt nie powinien zostawać sam ze swoimi trudnościami. Razem tworzymy społeczność, w której każdy może poczuć się wysłuchany, zrozumiany i bezpieczny.</p>
+
+    <div style="display: flex; justify-content: center; margin-top: 48px;">
+      <img src="uploads/plansza_ze_znakiem_graf.png" alt="Sfinansowano z budżetu Samorządu Województwa Śląskiego. Projekt realizowany z inicjatywy Zarządu Województwa Śląskiego." style="width: 100%; max-width: 560px; height: auto;"/>
+    </div>
+  </section>
+
+  <!-- E-learning Section -->
+  <section id="elearning" style="padding: 96px 56px; background: var(--bs-cream); scroll-margin-top: 90px;">
+    <div style="max-width: 900px; margin-left: auto; margin-right: auto; text-align: center;">
+      <span class="bs-eyebrow" style="justify-content: center;">Kurs online</span>
+      <h2 style="font-size: 48px; margin-top: 20px; line-height: 1.15; color: var(--bs-sage-deep);">Kariera – Praktyczny Program Aktywizacji Zawodowej Kobiet</h2>
+      <p style="font-size: 18px; line-height: 1.6; color: var(--bs-fg-2); max-width: 720px; margin: 24px auto 40px;">Kompleksowy program e-learningowy wspierający kobiety w powrocie na rynek pracy, budowaniu pewności siebie i planowaniu kariery zawodowej.</p>
+      <a class="bs-btn bs-btn-primary" href="https://share.eu.articulate.com/xctxikUdOU40SI_VyNoAK" target="_blank" rel="noopener" style="padding: 20px 40px; font-size: 17px; color: var(--bs-cream);">Rozpocznij szkolenie</a>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" style="padding: 96px 56px 56px; scroll-margin-top: 90px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+      <div>
+        <span class="bs-eyebrow">Aktualności</span>
+        <h2 style="font-size: 40px; margin-top: 16px; line-height: 1.1;">Co się u nas dzieje.</h2>
+      </div>
+      <a class="bs-btn bs-btn-ghost" href="#">Wszystkie wpisy (wkrótce)</a>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <article class="bs-featured-news" style="border-radius: var(--r-lg); overflow: hidden; background: var(--bs-white); border: 1px solid var(--bs-line); display: grid; grid-template-columns: 1fr 1fr;">
+        <div class="bs-featured-img" style="background: var(--bs-sage-wash); display: flex; align-items: center; justify-content: center; min-height: 460px;">
+          <img src="uploads/3-muszkieterki.jpg" alt="Połączenie sił Fundacji Bez Szeptu i Kancelarii Alimenty Okiem Praktyka" style="width: 100%; height: 100%; object-fit: contain;"/>
+        </div>
+        <div style="padding: 48px 52px; display: flex; flex-direction: column; justify-content: center;">
+          <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px; font-size: 13px; color: var(--bs-fg-2);">
+            <span class="bs-tag" style="font-size: 11px; padding: 4px 12px;">Najnowsze</span>
+            <span>Maj 2026</span>
+          </div>
+          <h3 style="font-size: 30px; line-height: 1.2; font-weight: 600;">Połączenie sił Fundacji Bez Szeptu i Kancelarii Alimenty Okiem Praktyka</h3>
+        </div>
+      </article>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <article style="border-radius: var(--r-lg); overflow: hidden; background: var(--bs-white); border: 1px solid var(--bs-line); display: flex; flex-direction: column;">
+          <img src="uploads/3. Wyklad-fundacja.JPG" alt="Seminarium przemoc" style="width: 100%; height: 220px; object-fit: cover;"/>
+          <div style="padding: 24px 26px 28px;">
+            <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 14px; font-size: 12px; color: var(--bs-fg-2);"><span>Kwiecień 2026</span></div>
+            <h3 style="font-size: 20px; line-height: 1.3; margin-bottom: 16px; font-weight: 600;">Seminarium dla kobiet "Jak rozpoznać przemoc"</h3>
+          </div>
+        </article>
+        <article style="border-radius: var(--r-lg); overflow: hidden; background: var(--bs-white); border: 1px solid var(--bs-line); display: flex; flex-direction: column;">
+          <img src="uploads/2. warsztaty-fundacja.JPG" alt="Warsztaty aktywizacja zawodowa" style="width: 100%; height: 220px; object-fit: cover;"/>
+          <div style="padding: 24px 26px 28px;">
+            <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 14px; font-size: 12px; color: var(--bs-fg-2);"><span>Marzec 2026</span></div>
+            <h3 style="font-size: 20px; line-height: 1.3; margin-bottom: 16px; font-weight: 600;">Ruszyła seria warsztatów "Aktywizacja zawodowa kobiet" w Gliwicach</h3>
+          </div>
+        </article>
+        <article style="border-radius: var(--r-lg); overflow: hidden; background: var(--bs-white); border: 1px solid var(--bs-line); display: flex; flex-direction: column;">
+          <img src="uploads/fundacja-szkolenie.PNG" alt="Szkolenie z mediacji" style="width: 100%; height: 220px; object-fit: cover;"/>
+          <div style="padding: 24px 26px 28px;">
+            <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 14px; font-size: 12px; color: var(--bs-fg-2);"><span>Luty 2026</span></div>
+            <h3 style="font-size: 20px; line-height: 1.3; margin-bottom: 16px; font-weight: 600;">Szkolenie z alternatywnych metod rozwiązywania sporów</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 56px;">
+      <img src="uploads/plansza_ze_znakiem_graf.png" alt="Sfinansowano z budżetu Samorządu Województwa Śląskiego. Projekt realizowany z inicjatywy Zarządu Województwa Śląskiego." style="width: 100%; max-width: 560px; height: auto;"/>
+    </div>
+  </section>
+
+  <!-- Support Hero Section -->
+  <section id="support" style="padding: 80px 56px 88px; background: var(--bs-clay-wash); position: relative; overflow: hidden; scroll-margin-top: 90px;">
+    <div style="position: absolute; right: -150px; top: -150px; width: 480px; height: 480px; border-radius: 50%; background: var(--bs-clay-soft); opacity: 0.5;"></div>
+    <div style="position: absolute; right: 120px; bottom: -80px; width: 220px; height: 220px; border-radius: 50%; background: var(--bs-sage-soft); opacity: 0.5;"></div>
+
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; position: relative;">
+      <div>
+        <span class="bs-eyebrow">Wsparcie ma siłę</span>
+        <h2 style="font-size: 64px; line-height: 1.02; margin-top: 20px; margin-bottom: 28px; letter-spacing: -0.015em;">
+          Twoja darowizna<br/>
+          to czyjaś <em style="font-style: italic; color: var(--bs-clay-deep); font-weight: 500;">pierwsza<br/>
+          bezpieczna rozmowa</em>.
+        </h2>
+        <p style="font-size: 18px; line-height: 1.6; color: var(--bs-ink-soft); max-width: 520px; margin-bottom: 28px;">Koszty administracyjne fundacji pokrywamy sami.</p>
+        <div style="display: flex; gap: 24px; font-size: 14px;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 28px; color: var(--bs-sage-deep); line-height: 1;">100%</div>
+            <div style="font-size: 12px; color: var(--bs-fg-2); max-width: 130px; margin-top: 6px; line-height: 1.4;">trafia bezpośrednio do beneficjentów</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 28px; color: var(--bs-sage-deep); line-height: 1;">0%</div>
+            <div style="font-size: 12px; color: var(--bs-fg-2); max-width: 130px; margin-top: 6px; line-height: 1.4;">koszty operacyjne</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-size: 28px; color: var(--bs-sage-deep); line-height: 1;">0 zł</div>
+            <div style="font-size: 12px; color: var(--bs-fg-2); max-width: 130px; margin-top: 6px; line-height: 1.4;">wynagrodzenie zarządu</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--bs-cream); padding: 36px; border-radius: var(--r-xl); box-shadow: var(--sh-3);">
+        <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bs-clay-deep); margin-bottom: 10px; font-weight: 600;">Szybka darowizna · Już niebawem</div>
+        <h3 style="font-size: 22px; margin-bottom: 24px;">Wybierz kwotę</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px;">
+          <button type="button" style="padding: 20px 12px; border-radius: var(--r-md); border: 2px solid var(--bs-line-2); background: var(--bs-white); font-family: var(--font-display); font-size: 22px; color: var(--bs-ink); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative;">
+            <span>50 zł</span>
+            <span style="font-family: var(--font-sans); font-size: 11px; color: var(--bs-fg-2); font-weight: 400;">= 1 × Konsultacja prawna</span>
+          </button>
+          <button type="button" style="padding: 20px 12px; border-radius: var(--r-md); border: 2px solid var(--bs-sage); background: var(--bs-sage-wash); font-family: var(--font-display); font-size: 22px; color: var(--bs-sage-deep); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative;">
+            <span style="position: absolute; top: -8px; right: -8px; width: 22px; height: 22px; border-radius: 50%; background: var(--bs-sage); color: var(--bs-cream); font-size: 13px; font-family: var(--font-sans); display: flex; align-items: center; justify-content: center;">✓</span>
+            <span>150 zł</span>
+            <span style="font-family: var(--font-sans); font-size: 11px; color: var(--bs-fg-2); font-weight: 400;">= 1 × Sesja indywidualna</span>
+          </button>
+          <button type="button" style="padding: 20px 12px; border-radius: var(--r-md); border: 2px solid var(--bs-line-2); background: var(--bs-white); font-family: var(--font-display); font-size: 22px; color: var(--bs-ink); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative;">
+            <span>300 zł</span>
+            <span style="font-family: var(--font-sans); font-size: 11px; color: var(--bs-fg-2); font-weight: 400;">= 1 × Mediacja rodzinna</span>
+          </button>
+        </div>
+        <button type="button" style="width: 100%; padding: 16px; border-radius: var(--r-md); border: 1px dashed var(--bs-line-2); background: var(--bs-white); font-size: 14px; color: var(--bs-fg-2); cursor: pointer; margin-bottom: 20px; font-family: var(--font-sans);">+ Inna kwota</button>
+        <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+          <button type="button" style="flex: 1; padding: 12px 16px; border-radius: var(--r-pill); border: 1px solid var(--bs-sage-deep); background: var(--bs-sage-deep); color: var(--bs-cream); font-size: 14px; font-weight: 500; cursor: pointer; font-family: var(--font-sans);">Jednorazowo</button>
+          <button type="button" style="flex: 1; padding: 12px 16px; border-radius: var(--r-pill); border: 1px solid var(--bs-line-2); background: var(--bs-white); color: var(--bs-ink); font-size: 14px; font-weight: 500; cursor: pointer; font-family: var(--font-sans);">Co miesiąc</button>
+        </div>
+        <a href="#bank" class="bs-btn bs-btn-clay" style="width: 100%; padding: 18px; font-size: 16px; text-align: center; display: block;">Przekaż 150 zł →</a>
+        <div style="display: flex; gap: 16px; justify-content: center; margin-top: 16px; font-size: 11px; color: var(--bs-fg-2);">
+          <span>BLIK</span><span>·</span><span>Karta</span><span>·</span><span>Apple/Google Pay</span><span>·</span><span>Przelew</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bank Transfer Section -->
+  <section style="padding: 0 56px 96px;">
+    <div style="max-width: 900px; margin: 0 auto; padding: 48px 56px; background: var(--bs-sage-deep); color: var(--bs-cream); border-radius: var(--r-xl); position: relative; overflow: hidden;">
+      <div style="position: absolute; right: -60px; top: -60px; width: 280px; height: 280px; border-radius: 50%; background: rgba(251,248,243,0.06);"></div>
+      <div style="position: absolute; left: -40px; bottom: -40px; width: 180px; height: 180px; border-radius: 50%; background: rgba(251,248,243,0.04);"></div>
+      <div style="position: relative; z-index: 1; text-align: center;">
+        <h2 style="font-size: 36px; line-height: 1.15; margin-bottom: 16px; color: var(--bs-cream);">Pomóż nam zorganizować warsztaty samoobrony dla kobiet</h2>
+        <p style="font-size: 17px; line-height: 1.6; color: rgba(251,248,243,0.85); margin-bottom: 40px; max-width: 640px; margin-left: auto; margin-right: auto;">Każde wsparcie, nawet niewielkie, pozwala nam kontynuować naszą misję. Dziękujemy za każdy gest solidarności.</p>
+        <div style="background: rgba(251,248,243,0.08); border: 1px solid rgba(251,248,243,0.2); border-radius: var(--r-lg); padding: 32px 40px; max-width: 680px; margin: 0 auto;">
+          <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bs-clay-soft); margin-bottom: 20px; font-weight: 600;">Wpłaty można dokonać przelewem tradycyjnym na rachunek fundacji:</div>
+          <div style="display: flex; flex-direction: column; gap: 12px; text-align: left; font-size: 15px; line-height: 1.7; color: rgba(251,248,243,0.95);">
+            <div><strong style="color: var(--bs-cream); font-weight: 600;">Fundacja Bez Szeptu</strong></div>
+            <div id="bank" style="scroll-margin-top: 90px; padding: 16px 20px; background: rgba(251,248,243,0.1); border-radius: var(--r-md); font-family: var(--font-display); font-size: 20px; letter-spacing: 0.05em; color: var(--bs-cream);">83 1020 2401 0000 0902 0766 3760</div>
+            <div><strong style="color: var(--bs-cream); font-weight: 600;">Tytuł przelewu:</strong> Darowizna na cele statutowe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wspólna stopka (wstrzykiwana przez assets/bs-shared.js) -->
+  <div id="bs-footer"></div>
+
+</div>
+
+<!-- Slajder warsztatów (specyficzny dla strony głównej) -->
+<script>
+(function() {
+  var idx = 0;
+  var track = document.getElementById('bsSliderTrack');
+  var dots = document.querySelectorAll('#bsSliderDots .bs-slider-dot');
+  var count = track ? track.children.length : 0;
+  function render() {
+    if (!track) return;
+    track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+  }
+  window.bsSlide = function(dir) { idx = (idx + dir + count) % count; render(); };
+  window.bsGoTo = function(n) { idx = n; render(); };
+  var timer = setInterval(function() { window.bsSlide(1); }, 6000);
+  var slider = document.querySelector('.bs-slider');
+  if (slider) {
+    slider.addEventListener('mouseenter', function() { clearInterval(timer); });
+    slider.addEventListener('mouseleave', function() { timer = setInterval(function() { window.bsSlide(1); }, 6000); });
+  }
+})();
+</script>
+
+<!-- Wspólny header/nawigacja/stopka -->
+<script src="assets/bs-shared.js"></script>
+
+</body>
+</html>
