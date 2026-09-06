@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statut fundacji — Fundacja Bez Szeptu</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F2D5C'/%3E%3Cpath d='M20 46V18h9c5 0 8 2.4 8 6.6 0 2.7-1.4 4.6-3.8 5.5 3 .8 4.8 3 4.8 6 0 4.6-3.3 6.9-8.6 6.9zm5.6-16.7h3c2.2 0 3.5-1 3.5-2.9s-1.3-2.8-3.6-2.8h-2.9zm0 12.2h3.4c2.4 0 3.7-1 3.7-3s-1.4-3-3.9-3h-3.2z' fill='%23E8B458'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Alexandria:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bs-styles.css">
+  <style>
+    .st-layout {
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      gap: 56px;
+      align-items: start;
+      padding: 48px 56px 100px;
+      max-width: 1220px;
+      margin: 0 auto;
+    }
+    .st-doc {
+      background: var(--bs-white);
+      border: 1px solid var(--bs-line);
+      border-radius: var(--r-lg);
+      padding: 52px 60px 56px;
+    }
+    .st-chapter { scroll-margin-top: 100px; }
+    .st-chapter + .st-chapter { margin-top: 48px; padding-top: 44px; border-top: 1px solid var(--bs-line); }
+    .st-chapter-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--bs-clay-deep); margin-bottom: 8px;
+    }
+    .st-chapter h2 { font-size: 28px; line-height: 1.2; margin-bottom: 28px; }
+    .st-par { margin-bottom: 30px; }
+    .st-par:last-child { margin-bottom: 0; }
+    .st-par-num {
+      font-family: var(--font-display); font-size: 19px; font-weight: 600;
+      color: var(--bs-sage-deep); margin-bottom: 12px;
+    }
+    .st-doc ol, .st-doc ul { margin: 0; padding-left: 26px; }
+    .st-doc li {
+      font-size: 15.5px; line-height: 1.7; color: var(--bs-fg-2);
+      margin-bottom: 8px; padding-left: 4px;
+    }
+    .st-doc li:last-child { margin-bottom: 0; }
+    .st-lead { font-size: 15.5px; line-height: 1.7; color: var(--bs-fg-2); margin-bottom: 12px; }
+
+    .st-nav {
+      position: sticky; top: 100px; align-self: start;
+      background: var(--bs-white);
+      border: 1px solid var(--bs-line);
+      border-radius: var(--r-lg);
+      padding: 18px;
+    }
+    .st-nav-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--bs-clay-deep); margin-bottom: 12px; padding: 0 10px;
+    }
+    .st-nav a {
+      display: block; padding: 9px 12px; border-radius: var(--r-sm);
+      font-size: 13.5px; font-weight: 500; color: var(--bs-fg-2); text-decoration: none;
+      transition: all 180ms;
+    }
+    .st-nav a:hover { background: var(--bs-sage-wash); color: var(--bs-sage-deep); }
+    .st-meta {
+      display: flex; flex-wrap: wrap; gap: 10px 28px;
+      background: var(--bs-sage-wash); border-radius: var(--r-lg);
+      padding: 20px 26px; margin-bottom: 40px;
+    }
+    .st-meta div { font-size: 14px; line-height: 1.5; color: var(--bs-fg-2); }
+    .st-meta strong { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bs-sage); margin-bottom: 3px; }
+
+    @media (max-width: 1024px) {
+      .st-layout { grid-template-columns: 1fr; gap: 0; }
+      .st-nav { display: none; }
+    }
+    @media (max-width: 768px) {
+      .st-layout { padding: 32px 20px 72px; }
+      .st-doc { padding: 32px 24px 36px; }
+      .st-chapter h2 { font-size: 23px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bs-container">
+
+  <div id="bs-header"></div>
+
+  <section style="padding: 72px 56px 8px; text-align: center;">
+    <span class="bs-eyebrow" style="justify-content: center;">Dokument statutowy</span>
+    <h1 style="font-size: 54px; line-height: 1.05; margin-top: 20px; margin-bottom: 18px; letter-spacing: -0.015em;">Statut Fundacji</h1>
+    <p style="font-size: 18px; line-height: 1.6; color: var(--bs-fg-2); max-width: 680px; margin: 0 auto;">Podstawa prawna działania Fundacji Bez Szeptu — cele statutowe i formy ich realizacji.</p>
+  </section>
+
+  <div class="st-layout">
+
+    <div class="st-doc">
+
+      <div class="st-meta">
+        <div><strong>Nazwa</strong>Fundacja Bez Szeptu</div>
+        <div><strong>Fundatorka</strong>Anna Zabielska</div>
+        <div><strong>Akt notarialny</strong>20.02.2026 r.</div>
+        <div><strong>Siedziba</strong>Gliwice</div>
+      </div>
+
+      <div class="st-chapter" id="r1">
+        <div class="st-chapter-label">Rozdział I</div>
+        <h2>Postanowienia ogólne</h2>
+
+        <div class="st-par">
+          <div class="st-par-num">§ 1</div>
+          <ol>
+            <li>Fundacja pod nazwą FUNDACJA BEZ SZEPTU, zwana dalej „Fundacją", została ustanowiona przez Annę Zabielską, zwaną dalej „Fundatorką", aktem notarialnym sporządzonym w dniu 20.02.2026 r.</li>
+            <li>Fundacja działa na podstawie ustawy z dnia 6 kwietnia 1984 r. o fundacjach oraz niniejszego statutu.</li>
+            <li>Fundacja posiada osobowość prawną od momentu wpisania jej do Krajowego Rejestru Sądowego.</li>
+            <li>Czas trwania Fundacji jest nieoznaczony.</li>
+          </ol>
+        </div>
+
+        <div class="st-par">
+          <div class="st-par-num">§ 2</div>
+          <ol>
+            <li>Siedzibą Fundacji jest miasto Gliwice.</li>
+            <li>Terenem działania Fundacji jest Rzeczpospolita Polska oraz zagranica.</li>
+            <li>Fundacja może używać pieczęci z danymi identyfikacyjnymi Fundacji oraz jej znakiem graficznym.</li>
+            <li>Fundacja może używać wyróżnionego znaku graficznego, który po zarejestrowaniu podlega ochronie prawnej.</li>
+            <li>Fundacja może ustanawiać odznaki, medale honorowe, nagrody i wyróżnienia i przyznawać je osobom fizycznym i prawnym oraz jednostkom organizacyjnym nie posiadającym osobowości prawnej zasłużonym Fundacji.</li>
+          </ol>
+        </div>
+
+        <div class="st-par">
+          <div class="st-par-num">§ 3</div>
+          <p class="st-lead">Nadzór nad Fundacją sprawuje:</p>
+          <ol>
+            <li>Minister właściwy do spraw zabezpieczenia społecznego.</li>
+            <li>Prezydent Miasta Gliwice.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="st-chapter" id="r2">
+        <div class="st-chapter-label">Rozdział II</div>
+        <h2>Cele Fundacji</h2>
+
+        <div class="st-par">
+          <div class="st-par-num">§ 4</div>
+          <p class="st-lead">Celem Fundacji jest działalność społecznie użyteczna w zakresie:</p>
+          <ol>
+            <li>udzielania pomocy osobom doświadczającym przemocy fizycznej, psychicznej, ekonomicznej i seksualnej;</li>
+            <li>udzielania wsparcia dzieciom, młodzieży i rodzinom w kryzysach relacyjnych i rozwojowych;</li>
+            <li>tworzenia i prowadzenia systemów wsparcia psychicznego, prawnego oraz interwencyjnego;</li>
+            <li>udzielania wsparcia osobom przed rozwodem, w trakcie postępowania rozwodowego oraz po jego zakończeniu;</li>
+            <li>prowadzenia mediacji sądowych i pozasądowych;</li>
+            <li>rozwoju i promocji mediacji oraz innych alternatywnych metod rozwiązywania sporów;</li>
+            <li>prowadzenia edukacji społecznej w zakresie dialogu, komunikacji i negocjacji;</li>
+            <li>wspierania osób zagrożonych wykluczeniem społecznym i zawodowym;</li>
+            <li>prowadzenia reintegracji społecznej i zawodowej osób w trudnej sytuacji życiowej;</li>
+            <li>udzielania wsparcia seniorom, rodzinom, osobom zależnym oraz ich opiekunom;</li>
+            <li>podejmowania działań na rzecz ochrony zdrowia psychicznego;</li>
+            <li>realizowania programów wsparcia emocjonalnego i terapeutycznego;</li>
+            <li>prowadzenia działań profilaktycznych w zakresie zdrowia psychicznego oraz przeciwdziałania kryzysom;</li>
+            <li>organizowania szkoleń, warsztatów i programów edukacyjnych;</li>
+            <li>rozwijania kompetencji społecznych i zawodowych;</li>
+            <li>prowadzenia edukacji w zakresie komunikacji, mediacji oraz rozwiązywania konfliktów;</li>
+            <li>prowadzenia działalności informacyjnej i wydawniczej;</li>
+            <li>przeciwdziałania dyskryminacji i nierównościom społecznym;</li>
+            <li>wspierania równości kobiet i mężczyzn;</li>
+            <li>wzmacniania pozycji grup defaworyzowanych;</li>
+            <li>wspierania aktywizacji zawodowej;</li>
+            <li>wspierania rozwoju przedsiębiorczości i kompetencji rynkowych;</li>
+            <li>wspierania powrotu na rynek pracy;</li>
+            <li>wspierania rozwoju wspólnot lokalnych;</li>
+            <li>pobudzania aktywności obywatelskiej;</li>
+            <li>rozwijania dialogu społecznego;</li>
+            <li>udzielania pomocy osobom poszkodowanym w wyniku konfliktów zbrojnych;</li>
+            <li>współpracy z instytucjami publicznymi oraz organizacjami pozarządowymi;</li>
+            <li>realizacji projektów krajowych i międzynarodowych.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="st-chapter" id="r3">
+        <div class="st-chapter-label">Rozdział III</div>
+        <h2>Formy realizacji celów</h2>
+
+        <div class="st-par">
+          <div class="st-par-num">§ 5</div>
+          <p class="st-lead">Fundacja realizuje swoje cele poprzez:</p>
+          <ol>
+            <li>Udzielanie pomocy psychologicznej, prawnej i socjalnej.</li>
+            <li>Prowadzenie mediacji i poradnictwa.</li>
+            <li>Organizowanie szkoleń, kursów, warsztatów i konferencji.</li>
+            <li>Organizowanie grup wsparcia i programów terapeutycznych.</li>
+            <li>Działalność edukacyjną, informacyjną i wydawniczą.</li>
+            <li>Organizowanie kampanii społecznych i projektów pomocowych.</li>
+            <li>Współpracę z instytucjami publicznymi, samorządami, NGO i podmiotami zagranicznymi.</li>
+            <li>Pozyskiwanie środków krajowych i zagranicznych na realizację celów statutowych.</li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="st-nav">
+      <div class="st-nav-title">Na tej stronie</div>
+      <a href="#r1">Rozdział I — Postanowienia ogólne</a>
+      <a href="#r2">Rozdział II — Cele Fundacji</a>
+      <a href="#r3">Rozdział III — Formy realizacji celów</a>
+    </aside>
+
+  </div>
+
+  <div id="bs-footer"></div>
+
+</div>
+
+<script src="assets/bs-shared.js"></script>
+
+</body>
+</html>

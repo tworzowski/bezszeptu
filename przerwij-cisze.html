@@ -91,6 +91,81 @@
     }
     .pc-nav a.active .pc-dot { background: var(--bs-clay); transform: scale(1.6); }
 
+    /* Warsztat: układ pionowy z mini galerią */
+    .pc-workshop {
+      display: block;
+      padding: 0;
+    }
+    .pc-hero {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      background-color: var(--bs-sage-wash);
+      background-image: repeating-linear-gradient(45deg, var(--bs-sage-wash) 0 12px, #E4E9F3 12px 24px);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .pc-hero--graphic {
+      aspect-ratio: 4 / 3;
+      background-size: contain;
+      background-image: none;
+      background-color: var(--bs-sage-wash);
+    }
+    .pc-body { padding: 30px 36px 32px; }
+    .pc-gallery {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .pc-thumb {
+      aspect-ratio: 1 / 1;
+      cursor: zoom-in;
+      transition: transform 160ms, box-shadow 160ms;
+      border-radius: var(--r-sm);
+      background-color: var(--bs-sage-wash);
+      background-image: repeating-linear-gradient(45deg, var(--bs-sage-wash) 0 8px, #E4E9F3 8px 16px);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .pc-thumb:hover { transform: scale(1.04); box-shadow: 0 6px 18px rgba(31,45,92,0.18); }
+    .pc-gallery + a { margin-top: 22px; }
+
+    /* Lightbox */
+    .pc-lb {
+      position: fixed; inset: 0; z-index: 200;
+      display: none; align-items: center; justify-content: center;
+      background: rgba(20,26,45,0.9); padding: 32px;
+    }
+    .pc-lb.open { display: flex; }
+    .pc-lb img {
+      max-width: 100%; max-height: 100%;
+      border-radius: var(--r-sm);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .pc-lb-close {
+      position: absolute; top: 18px; right: 22px;
+      width: 44px; height: 44px; border: 0; border-radius: 50%;
+      background: rgba(251,248,243,0.14); color: #FBF8F3;
+      font-size: 24px; line-height: 1; cursor: pointer;
+    }
+    .pc-lb-close:hover { background: rgba(251,248,243,0.26); }
+    .pc-lb-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px; border: 0; border-radius: 50%;
+      background: rgba(251,248,243,0.14); color: #FBF8F3;
+      font-size: 22px; cursor: pointer;
+    }
+    .pc-lb-nav:hover { background: rgba(251,248,243,0.26); }
+    .pc-lb-prev { left: 18px; }
+    .pc-lb-next { right: 18px; }
+    .pc-soon {
+      background: var(--bs-white);
+      border: 1px dashed var(--bs-line-2);
+      border-radius: var(--r-lg);
+      padding: 30px 36px 32px;
+    }
+
     @media (max-width: 1024px) {
       .pc-layout { grid-template-columns: 1fr; gap: 0; }
       .pc-nav { display: none; }
@@ -136,101 +211,127 @@
 
       <!-- Warsztaty s1–s10 -->
       <div class="pc-section pc-workshop" id="s1">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 1 — Emocje</span></div></div>
+        <div class="pc-hero" style="background-image: url('uploads/warsztaty/w1-1.jpg');" role="img" aria-label="Warsztat: rozpoznawanie i nazywanie emocji"></div>
         <div class="pc-body">
           <div class="pc-num">Warsztat 01</div>
           <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Rozpoznawanie i nazywanie emocji</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Uczymy się zauważać, co czujemy i skąd to się bierze. Proste narzędzia do nazywania emocji i rozumienia własnych reakcji.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Malowanie, kamienie, kolory. Emocja dostaje nazwę i kształt — łatwiej o niej mówić.</p>
+          <div class="pc-gallery">
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w1-1.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w1-2.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w1-3.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w1-4.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w1-5.png');"></div>
+          </div>
         </div>
       </div>
 
       <div class="pc-section pc-workshop" id="s2">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 2 — Stres i lęk</span></div></div>
+        <div class="pc-hero pc-hero--graphic" style="background-image: url('uploads/warsztaty/w2-1.jpg');" role="img" aria-label="Warsztat z dziećmi w Zabrzu"></div>
         <div class="pc-body">
           <div class="pc-num">Warsztat 02</div>
-          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Radzenie sobie ze stresem i lękiem</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Techniki oddechowe, uważność i praktyczne sposoby na trudne momenty — w szkole, w domu i w relacjach.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Praca z dziećmi w Zabrzu</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Wychodzimy tam, gdzie są dzieci. Rozmowa, zabawa, zaufanie — bez oceniania.</p>
+          <div class="pc-gallery">
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w2-1.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w2-2.jpg');"></div>
+          </div>
         </div>
       </div>
 
       <div class="pc-section pc-workshop" id="s3">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 3 — Komunikacja</span></div></div>
+        <div class="pc-hero" style="background-image: url('uploads/warsztaty/w3-1.png');" role="img" aria-label="Warsztat: komunikacja bez przemocy"></div>
         <div class="pc-body">
           <div class="pc-num">Warsztat 03</div>
           <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Komunikacja bez przemocy</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Jak mówić o swoich potrzebach i słuchać innych bez ranienia. Rozwiązywanie konfliktów w duchu porozumienia.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Mówić o swoich potrzebach, nie ranić. Słuchać, nie oceniać. Konflikt bez przegranych.</p>
+          <div class="pc-gallery">
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w3-1.png');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w3-2.png');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w3-3.png');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w3-4.png');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w3-5.png');"></div>
+          </div>
         </div>
       </div>
 
       <div class="pc-section pc-workshop" id="s4">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 4 — Poczucie wartości</span></div></div>
+        <div class="pc-hero" style="background-image: url('uploads/warsztaty/w4-1.jpg');" role="img" aria-label="Warsztat: poczucie własnej wartości"></div>
         <div class="pc-body">
           <div class="pc-num">Warsztat 04</div>
-          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Budowanie poczucia własnej wartości</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Skąd bierze się pewność siebie i jak ją wzmacniać. Praca z wewnętrznym krytykiem i mocnymi stronami.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Poczucie budowania własnej wartości</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Spacer, muzyka, wspólny czas na trawie. Zauważyć siebie i to, co porusza.</p>
+          <div class="pc-gallery">
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w4-1.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w4-2.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w4-3.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w4-4.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w4-5.jpg');"></div>
+          </div>
         </div>
       </div>
 
-      <div class="pc-section pc-workshop" id="s5">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 5 — Relacje i granice</span></div></div>
-        <div class="pc-body">
-          <div class="pc-num">Warsztat 05</div>
-          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Zdrowe relacje i granice</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Jak budować relacje oparte na szacunku i stawiać granice. Rozpoznawanie relacji, które nam szkodzą.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
-        </div>
+      <div class="pc-section pc-soon" id="s5">
+        <div class="pc-num">Warsztat 05</div>
+        <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin: 0;">Wkrótce uzupełnimy szczegóły.</p>
       </div>
 
       <div class="pc-section pc-workshop" id="s6">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 6 — Świat online</span></div></div>
+        <div class="pc-hero" style="background-image: url('uploads/warsztaty/w6-5.jpg');" role="img" aria-label="Warsztat o dezinformacji z Wojtkiem"></div>
         <div class="pc-body">
           <div class="pc-num">Warsztat 06</div>
-          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Świat online — presja i hejt</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Media społecznościowe, porównywanie się i mowa nienawiści. Jak dbać o siebie w cyfrowym świecie.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Dezinformacja — jak szukać prawdy</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Wojtek z Klubu Odkrywców Świata o tym, jak fałszywe informacje grają na emocjach i jak się przed tym bronić.</p>
+          <div class="pc-gallery">
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w6-1.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w6-2.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w6-3.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w6-5.jpg');"></div>
+          </div>
         </div>
       </div>
 
       <div class="pc-section pc-workshop" id="s7">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 7 — Prośba o pomoc</span></div></div>
+        <div class="pc-hero" style="background-image: url('uploads/warsztaty/w7-1.jpg');" role="img" aria-label="Warsztat pierwszej pomocy"></div>
         <div class="pc-body">
           <div class="pc-num">Warsztat 07</div>
-          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Kiedy i jak prosić o pomoc</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Proszenie o pomoc to siła, nie słabość. Gdzie i do kogo się zwrócić, gdy jest ciężko.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Pierwsza pomoc — kiedy i jak sobie pomóc</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Konkretne skille, nie teoria. Jak reagować, gdy liczy się każda minuta.</p>
+          <div class="pc-gallery">
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w7-1.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w7-2.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w7-3.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w7-4.jpg');"></div>
+          </div>
         </div>
       </div>
 
-      <div class="pc-section pc-workshop" id="s8">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 8 — Kryzys i strata</span></div></div>
-        <div class="pc-body">
-          <div class="pc-num">Warsztat 08</div>
-          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Radzenie sobie z kryzysem i stratą</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Jak przejść przez trudne doświadczenia — rozstanie, stratę, zmianę. Oswajanie emocji, które przytłaczają.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
-        </div>
+      <div class="pc-section pc-soon" id="s8">
+        <div class="pc-num">Warsztat 08</div>
+        <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin: 0;">Wkrótce uzupełnimy szczegóły.</p>
       </div>
 
       <div class="pc-section pc-workshop" id="s9">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 9 — Dla rodziców</span></div></div>
+        <div class="pc-hero" style="background-image: url('uploads/warsztaty/w9-1.jpg');" role="img" aria-label="Warsztaty rękodzieła"></div>
         <div class="pc-body">
           <div class="pc-num">Warsztat 09</div>
-          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Warsztaty dla rodziców i opiekunów</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Jak rozmawiać z nastolatkiem, rozpoznawać sygnały ostrzegawcze i być wsparciem, nie sędzią.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Zrobione rękami — rękodzieło i uważność</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Wazony, kolory, faktura. Głowa odpoczywa, kiedy ręce pracują.</p>
+          <div class="pc-gallery">
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w9-1.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w9-2.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w9-3.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w9-4.jpg');"></div>
+            <div class="pc-thumb" role="button" tabindex="0" aria-label="Powiększ zdjęcie" style="background-image: url('uploads/warsztaty/w9-5.jpg');"></div>
+          </div>
         </div>
       </div>
 
-      <div class="pc-section pc-workshop" id="s10">
-        <div class="pc-media"><div class="pc-ph"><span>zdjęcie: Warsztat 10 — Integracja</span></div></div>
+      <div class="pc-section pc-workshop" id="s10" style="border-color: var(--bs-line);">
         <div class="pc-body">
           <div class="pc-num">Warsztat 10</div>
-          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Integracja i wspólne działania</h3>
-          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Spotkanie podsumowujące — wspólne aktywności, budowanie społeczności i planowanie dalszych kroków.</p>
+          <h3 style="font-size: 25px; line-height: 1.2; margin-bottom: 12px;">Zadbany i zdrowy fundament dla całej rodziny</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: var(--bs-fg-2); margin-bottom: 22px;">Sen, ruch, jedzenie, rozmowa. Codzienne podstawy, na których stoi zdrowie psychiczne — dla dzieci i dorosłych.</p>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY14fpkEgWdrQxJjp15g3hb0569A6ZYGUd22OwexD-ic790Q/viewform" target="_blank" rel="noopener noreferrer" class="bs-btn bs-btn-clay" style="padding: 13px 26px;">Zapisz się</a>
         </div>
       </div>
@@ -256,6 +357,13 @@
   </div>
 
   <div id="bs-footer"></div>
+
+  <div class="pc-lb" id="pcLb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+    <button type="button" class="pc-lb-close" id="pcLbClose" aria-label="Zamknij">×</button>
+    <button type="button" class="pc-lb-nav pc-lb-prev" id="pcLbPrev" aria-label="Poprzednie zdjęcie">‹</button>
+    <img id="pcLbImg" src="" alt="">
+    <button type="button" class="pc-lb-nav pc-lb-next" id="pcLbNext" aria-label="Następne zdjęcie">›</button>
+  </div>
 
 </div>
 
@@ -283,6 +391,56 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
   onScroll();
+})();
+</script>
+
+<!-- Lightbox miniatur -->
+<script>
+(function () {
+  var lb = document.getElementById('pcLb');
+  var img = document.getElementById('pcLbImg');
+  if (!lb || !img) return;
+
+  var group = [], idx = 0;
+
+  function srcOf(el) {
+    var m = /url\(["']?(.*?)["']?\)/.exec(el.style.backgroundImage || '');
+    return m ? m[1] : '';
+  }
+  function show(i) {
+    if (!group.length) return;
+    idx = (i + group.length) % group.length;
+    img.src = srcOf(group[idx]);
+  }
+  function open(el) {
+    group = Array.prototype.slice.call(el.parentElement.querySelectorAll('.pc-thumb'));
+    show(group.indexOf(el));
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('open');
+    img.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.pc-thumb').forEach(function (t) {
+    t.addEventListener('click', function () { open(t); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(t); }
+    });
+  });
+
+  document.getElementById('pcLbClose').addEventListener('click', close);
+  document.getElementById('pcLbPrev').addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
+  document.getElementById('pcLbNext').addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
 })();
 </script>
 
