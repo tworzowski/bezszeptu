@@ -17,7 +17,7 @@
     { label: 'Co robimy', dropdown: [
       { label: 'Programy', href: 'programy.html', desc: 'Nasze programy i projekty' },
       { label: 'Aktualności', href: a('news'), desc: 'Co się u nas dzieje' },
-      { label: 'Kampanie', href: 'kampanie.html', desc: 'Kampanie informacyjne' }
+      { label: 'Kampanie (wkrótce)', href: '#', desc: 'Kampanie informacyjne' }
     ]},
     { label: 'Wiedza', dropdown: [
       { label: 'E-learning', href: a('elearning'), desc: 'Kursy online' }
@@ -107,7 +107,7 @@
             '<a href="' + a('areas') + '">Obszary wsparcia</a>' +
             '<a href="' + a('support') + '">Wsparcie</a>' +
             '<a href="' + a('elearning') + '">E-learning</a>' +
-            '<a href="kampanie.html">Kampanie</a>' +
+            '<a href="#">Kampanie (wkrótce)</a>' +
           '</div>' +
         '</div>' +
         '<div>' +
